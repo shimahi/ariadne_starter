@@ -8,22 +8,38 @@ Python製マイクロフレームワーク「[FAST API](https://fastapi.tiangolo
 
 Fast APIのビルドインサーバとして[Uvicorn](Uvicorn)を使用
 
+### 動作環境
+Python `^3.8`
+Poetry  `1.0.10`  
 
+### 使用方法
 
-はじめる
+・引数にアプリ名をつけて `source` または `.` コマンドを実行してください。
+```
+$ . ./init your_api_name
+```
+
+・サーバーの起動
+```
+$ docker-compose up -d
 
 ```
-$ docker-compose build
-```
-→ localhost:4000
+→ http://localhost:4000
+
+<br>
 
 
-
-パッケージの追加
+・パッケージの追加
 ```
 $ poetry add xxxx
 ```
-開発時のみ使用するパッケージの場合
+開発時のみ使用するパッケージの場合 `-D` オプションをつける
 ```
 $ poetry add -D xxxx
+```
+
+
+パッケージ追加後はイメージを再ビルドする  
+```
+$ docker-compose up -d --build
 ```
