@@ -22,7 +22,7 @@ class Query(ObjectType):
     def resolve_member(_, info):
         return [
             {
-                "name": "しまひ",
+                "name": "shimahi",
                 "part": "guitar",
             },
             {
