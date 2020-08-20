@@ -9,7 +9,6 @@ Python製マイクロフレームワーク「[FAST API](https://fastapi.tiangolo
 Fast APIのビルドインサーバとして[Uvicorn](Uvicorn)を使用
 
 ### 動作環境
-Python `^3.8`
 Poetry  `1.0.10`  
 
 ### 使用方法
@@ -26,7 +25,7 @@ $ docker-compose up -d
 ```
 → http://localhost:4000
 
-<br>
+<br>  
 
 
 ・パッケージの追加
@@ -43,3 +42,38 @@ $ poetry add -D xxxx
 ```
 $ docker-compose up -d --build
 ```
+
+<br>  
+
+### Google Container Registry へのデプロイ
+
+コンテナイメージを名前付けしてビルド
+
+```
+$ docker build -t your_tag_name .
+```
+
+コンテナイメージに対し、 GCPのproject id に紐づいたタグをつける
+```
+$ docker tag your_tag_name gcr.io/<PROJECT_ID>/your_tag_name
+```
+
+Google Container Registry に push する  
+
+```
+$ docker push gcr.io/<PROJECT_ID>/your_tag_name
+```
+
+
+補)ビルドからプッシュまで一気にやるには
+
+```
+$ gcloud builds submit --tag gcr.io/<PROJECT_ID>/your_tag_name --project <PROJECT_ID>
+```
+
+
+### TODO
+- CLIでデプロイするやり方の調査
+- git pushでCloud Runに自動デプロイするCI/CD環境の構築
+- React, Hasuraと組み合わせたmonorepo環境の構築
+- Cloud Runの認可をHasuraに与える手順の調査・自動化
