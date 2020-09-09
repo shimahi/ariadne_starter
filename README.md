@@ -2,11 +2,11 @@
 
 Python製マイクロフレームワーク「[FAST API](https://fastapi.tiangolo.com/)」を使用するためのDocker環境
 
-
 パッケージのバージョン管理は[Poetry](https://python-poetry.org/)を使用
 
+Fast APIのビルドインサーバとして[Uvicorn](https://www.uvicorn.org/)を使用
 
-Fast APIのビルドインサーバとして[Uvicorn](Uvicorn)を使用
+GraphQLサーバとして[Ariadne](https://ariadnegraphql.org/)を使用
 
 ### 動作環境
 Poetry  `1.0.10`  
@@ -75,5 +75,3 @@ $ gcloud builds submit --tag gcr.io/<PROJECT_ID>/your_tag_name --project <PROJEC
 ### TODO
 - CLIでデプロイするやり方の調査
 - git pushでCloud Runに自動デプロイするCI/CD環境の構築
-- React, Hasuraと組み合わせたmonorepo環境の構築
-- Cloud Runの認可をHasuraに与える手順の調査・自動化
