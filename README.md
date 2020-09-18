@@ -1,12 +1,11 @@
 # fastapi_starter
 
-Python製マイクロフレームワーク「[FAST API](https://fastapi.tiangolo.com/)」を使用するためのDocker環境
+Python製GraphQLライブラリ[Ariadne](https://ariadnegraphql.org/)を使用するためのDocker環境
 
 パッケージのバージョン管理は[Poetry](https://python-poetry.org/)を使用
 
-Fast APIのビルドインサーバとして[Uvicorn](https://www.uvicorn.org/)を使用
+ビルドインサーバとして[Uvicorn](https://www.uvicorn.org/)を使用
 
-GraphQLサーバとして[Ariadne](https://ariadnegraphql.org/)を使用
 
 ### 動作環境
 Poetry  `1.0.10`  
