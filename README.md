@@ -1,4 +1,4 @@
-# fastapi_starter
+# ariadne_starter
 
 Python製GraphQLライブラリ[Ariadne](https://ariadnegraphql.org/)を使用するためのDocker環境
 

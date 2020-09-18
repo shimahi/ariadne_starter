@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "fastapi_starter"
+name = "ariadne_starter"
 version = "0.1.0"
 description = ""
 authors = ["shimahi"]
