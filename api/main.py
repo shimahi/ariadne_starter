@@ -8,7 +8,7 @@ query = QueryType()
 
 
 @query.field("hello")
-def resolve_hello(*_, name):
+def resolve_hello(*_, name: str):
     return f"Hello, {name}!!"
 
 
