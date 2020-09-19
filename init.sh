@@ -23,6 +23,21 @@ __pycache__/
 .env
 ' >>.gitignore
 
+touch vercel.json
+echo '
+{
+  "version": 2,
+  "regions": ["hnd1"],
+  "functions": {
+    "api/main.py": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "routes": [{ "src": "/", "dest": "api/main.py" }]
+}
+' >> vercel.json
+
 git init
 
 ## write README

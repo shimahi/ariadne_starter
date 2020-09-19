@@ -42,7 +42,22 @@ $ poetry add -D xxxx
 $ docker-compose up -d --build
 ```
 
-<br>  
+<br>
+
+
+### Vercelへのデプロイ
+
+`poetry.lock`のパッケージファイルを`requirements.txt` に出力する。
+
+```
+$ rm -f requirements.txt && poetry export -f requirements.txt > requirements.txt
+```
+
+リポジトリをVercelにインテグレートすればデプロイできる。
+
+
+
+<br>
 
 ### Google Container Registry へのデプロイ
 
@@ -72,5 +87,4 @@ $ gcloud builds submit --tag gcr.io/<PROJECT_ID>/your_tag_name --project <PROJEC
 
 
 ### TODO
-- CLIでデプロイするやり方の調査
-- git pushでCloud Runに自動デプロイするCI/CD環境の構築
+- git pushで自動デプロイするCI/CD環境の構築
