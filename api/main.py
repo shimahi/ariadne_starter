@@ -33,4 +33,4 @@ def resolve_members(*_):
 
 schema = make_executable_schema(type_defs, query)
 
-app = GraphQL(schema, debug=True)
+app = GraphQL(schema, debug=True)  # type: ignore
