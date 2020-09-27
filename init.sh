@@ -44,6 +44,13 @@ git init
 touch README.md
 echo "# $1" >>README.md
 
+mkdir .vscode
+touch .vscode/settings.json
+echo '{
+  "python.pythonPath": ".venv/bin/python3"
+}
+' >> .vscode/settings.json
+
 ## remove this script
 find ./ -name "init.sh" | xargs rm
 
