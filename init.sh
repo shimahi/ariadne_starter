@@ -47,8 +47,11 @@ echo "# $1" >>README.md
 mkdir .vscode
 touch .vscode/settings.json
 echo '{
-  "python.pythonPath": ".venv/bin/python3"
+  "python.pythonPath": "./.venv/bin/python3",
+  "python.autoComplete.extraPaths": ["./app"],
+  "python.analysis.extraPaths": ["./app"]
 }
+
 ' >> .vscode/settings.json
 
 ## remove this script

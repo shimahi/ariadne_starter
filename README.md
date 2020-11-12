@@ -44,21 +44,6 @@ $ docker-compose up -d --build
 
 <br>
 
-
-### Vercelへのデプロイ
-
-`poetry.lock`のパッケージファイルを`requirements.txt` に出力する。
-
-```
-$ rm -f requirements.txt && poetry export -f requirements.txt > requirements.txt
-```
-
-リポジトリをVercelにインテグレートすればデプロイできる。
-
-
-
-<br>
-
 ### Google Container Registry へのデプロイ
 
 コンテナイメージを名前付けしてビルド
