@@ -6,6 +6,8 @@ Python製GraphQLライブラリ[Ariadne](https://ariadnegraphql.org/)を使用�
 
 ビルドインサーバとして[Uvicorn](https://www.uvicorn.org/)を使用
 
+REST APIに対応するラッパーとしてFast APIを使用している
+
 
 ### 動作環境
 Poetry  `1.0.10`  
